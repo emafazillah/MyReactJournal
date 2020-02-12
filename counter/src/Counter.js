@@ -1,4 +1,5 @@
 import React from 'react';
+import { INCREMENT, DECREMENT } from './action';
 import { connect } from 'react-redux';
 
 function mapStateToProps(state) {
