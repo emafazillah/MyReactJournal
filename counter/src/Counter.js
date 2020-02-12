@@ -9,11 +9,11 @@ function mapStateToProps(state) {
 
 class Counter extends React.Component {
     increment = () => {
-        
+        this.props.dispatch({ type: 'INCREMENT' });
     };
 
     decrement = () => {
-        
+        this.props.dispatch({ type: 'DECREMENT' });
     };
 
     render() {
