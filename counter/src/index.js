@@ -2,6 +2,9 @@ import React from 'react';
 import Counter from './Counter';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { render } from "react-dom";
+
+import './index.css';
 
 const initialState = {
     count: 0
@@ -39,3 +42,5 @@ const App = () => (
         <Counter />
     </Provider>
 );
+
+render(<App />, document.getElementById("root"));

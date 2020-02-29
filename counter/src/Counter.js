@@ -19,7 +19,7 @@ class Counter extends React.Component {
 
     render() {
         return (
-            <div className='Counter'>
+            <div className='counter'>
                 <h2>Counter</h2>
                 <div>
                     <button onClick={this.decrement}>-</button>
