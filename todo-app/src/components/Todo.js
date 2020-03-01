@@ -1,12 +1,21 @@
-// components/Todo.js
+import React from "react";
+import cx from "classnames";
 
-// ... other imports
-import { connect } from "react-redux";
-import { toggleTodo } from "../redux/actions";
+const Todo = ({ todo }) => (
+  <li
+    className="todo-item"
+    onClick={() => {} /** dispatches action to toggle todo */}
+  >
+    {todo && todo.completed ? "👌" : "👋"}{" "}
+    <span
+      className={cx(
+        "todo-item__text",
+        todo && todo.completed && "todo-item__text--completed"
+      )}
+    >
+      {todo.content}
+    </span>
+  </li>
+);
 
-const Todo = // ... component implementation
-
-export default connect(
-  null,
-  { toggleTodo }
-)(Todo);
+export default Todo;
