@@ -1,19 +1,19 @@
-// components/AddTodo.js
-
-import React from 'react'
-import { connect } from 'react-redux'
-import { addTodo } from '../redux/actions'
+import React from 'react';
 
 class AddTodo extends React.Component {
-  // ...
+  constructor(props) {
+    super(props);
+    this.state = { input: "" };
+  }
+
+  updateInput = input => {
+    this.setState({ input });
+  };
 
   handleAddTodo = () => {
     // dispatches actions to add todo
-    this.props.addTodo(this.state.input)
-
     // sets state back to empty string
-    this.setState({ input: '' })
-  }
+  };
 
   render() {
     return (
@@ -26,11 +26,8 @@ class AddTodo extends React.Component {
           Add Todo
         </button>
       </div>
-    )
+    );
   }
 }
 
-export default connect(
-  null,
-  { addTodo }
-)(AddTodo)
+export default AddTodo;
