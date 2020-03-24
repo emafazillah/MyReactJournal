@@ -8,4 +8,5 @@ Title | Project |
 [A Complete React Redux Tutorial for Beginners (2019)](https://daveceddia.com/redux-tutorial/) | [https://github.com/emafazillah/MyReactJournal/tree/master/counter](https://github.com/emafazillah/MyReactJournal/tree/master/counter)
 [Basic Tutorial React Redux](https://react-redux.js.org/introduction/basic-tutorial) | [https://github.com/emafazillah/MyReactJournal/tree/master/todo-app](https://github.com/emafazillah/MyReactJournal/tree/master/todo-app)
 [React Redux Tutorial for Beginners: The Definitive Guide (2020)](https://www.valentinog.com/blog/redux/) | [https://github.com/emafazillah/MyReactJournal/tree/master/react-redux-tutorial](https://github.com/emafazillah/MyReactJournal/tree/master/react-redux-tutorial)
+[Getting Started with React - An Overview and Walkthrough Tutorial](https://www.taniarascia.com/getting-started-with-react/) | [https://github.com/emafazillah/MyReactJournal/tree/master/getting-started-with-react](https://github.com/emafazillah/MyReactJournal/tree/master/getting-started-with-react)
 
