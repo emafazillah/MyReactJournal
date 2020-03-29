@@ -7,11 +7,13 @@ const sevenTimerTemp =
 fetch(`http://www.7timer.info/bin/api.pl?lon=${lon}&lat=${lat}&product=astro&output=json`)
 .then(response => response.json())
 .then(response => response.dataseries[0].temp2m);
+console.log('sevenTimerTemp: ', sevenTimerTemp);
  
 const fccWeatherTemp =
 fetch(`https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${lon}`)
 .then(response => response.json())
 .then(response => response.main.temp);
+console.log('fccWeatherTemp: ', fccWeatherTemp);
  
 Promise.all([sevenTimerTemp, fccWeatherTemp])
 .then(responses => {
