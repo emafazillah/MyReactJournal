@@ -16,13 +16,37 @@ try {
         formattedYesterdayDate = getMonth + '-' + yesterday.getDate() + '-' + yesterday.getFullYear();
     }
     
+    // request.get(URL + formattedYesterdayDate + CSV)
+    //     .pipe(new StringStream())
+    //     .CSVParse({ skipEmptyLines: true, header: true })
+    //     .filter(object => (object.Country_Region === 'Canada'))
+    //     .map(async(object) => {
+    //         // TODO: Get country region from configuration
+    //     });
+
+    let result = [];
+
     request.get(URL + formattedYesterdayDate + CSV)
         .pipe(new StringStream())
         .CSVParse({ skipEmptyLines: true, header: true })
         .filter(object => (object.Country_Region === 'Malaysia'))
         .map(async(object) => {
-            // TODO: Get country region from configuration
+            result.push(object)
+            console.log('result: ', result);
         });
+
+    Promise.all([result])
+        .then(objects => {
+            let totalDeaths = 0;
+            objects.forEach(object => {
+                console.log('object: ', object);
+                console.log('Deaths: ', object.Deaths);
+                totalDeaths += object.Deaths;
+            });
+            return totalDeaths;
+        })
+        .then(totalDeaths => `Total Deaths in US as ${yesterday} is ${totalDeaths}`)
+        .catch(() => console.log('ERROR'));
 } catch (error) {
     console.log(error.message);
 }
